@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+    <title>Invoice</title>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="invoice-header">
+            <div class="title-date">
+                <h2 class="title">INVOICE</h2>
+                <p class="date">01/12/20</p>
+            </div>
+            <div class="space"></div>
+            <p class="invoice-number">#08 279</p>
+        </div>
+        <div class="invoice-body">
+            <table>
+                <thead>
+                    <th style="padding-left:12px;">PRODUCT</th>
+                    <th>UNIT</th>
+                    <th>PRICE</th>
+                    <th>AMOUNT</th>
+                    <th style="text-align: right;">ACTION</th>
+                </thead>
+
+                <tbody id="table-body">
+                <tr class="single-row">
+                    <td><input type="text" placeholder="Product name" class="product left"></td>
+                    <td><input type="number" placeholder="0" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="price" class="price" id="price" onkeyup="getInput()"></td>
+                    <td><input type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                    <td style="text-align: right;"><span class="material-icons"  >delete_outline</span></td>
+                </tr>
+                
+                <tr style="padding-left: 20px">
+                    <td class="dashed "><div class="float">
+                        <a href="#" class="float" id="add-row">
+                            <span class="material-icons plus">add</span>
+                        </a>
+                    </div>
+                </td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                </tr>
+            </tbody>
+            </table>
+            <div id="sum"><input type="text" placeholder="0.00" name="total" class="total" id="total" disabled></div>
+
+        </div>
+    </div>
+
+
+    <script src="app.js" async defer></script>
+</body>
+</html>
